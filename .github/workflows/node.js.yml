@@ -30,5 +30,6 @@ jobs:
       if: ${{ github.ref == 'refs/heads/main' }} # Only deploy on pushes to the main branch
       uses: JamesIves/github-pages-deploy-action@v4
       with:
-        branch: gh-pages   # Deploy to the gh-pages branch
-        folder: public      # Deploy the contents of the public folder
+        branch: gh-pages  # Deploy to the gh-pages branch
+        folder: public     # Deploy the contents of the public folder
+        token: ${{ secrets.GH_TOKEN }}  # Use the Personal Access Token for authentication
